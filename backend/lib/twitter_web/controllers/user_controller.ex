@@ -47,7 +47,7 @@ defmodule TwitterWeb.UserController do
         conn
         |> put_session(:current_user_id, user.id)
         |> put_status(:ok)
-        |> render(TwitterWeb.UserView, "sign_in.json", user: user)
+        |> render("sign_in.json", user: user)
 
       {:error, message} ->
         conn

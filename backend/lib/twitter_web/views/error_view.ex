@@ -12,4 +12,20 @@ defmodule TwitterWeb.ErrorView do
       }
     }
   end
+
+  def render("404.json", _assigns) do
+    %{
+      errors: %{
+        detail: "Endpoint not found"
+      }
+    }
+  end
+
+  def render("500.json", _assigns) do
+    %{
+      errors: %{
+        detail: "Internal Server Error :("
+      }
+    }
+  end
 end
