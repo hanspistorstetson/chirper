@@ -40,5 +40,9 @@ defmodule TwitterWeb.Endpoint do
     key: "_twitter_key",
     signing_salt: "e3tzYbz1"
 
+  plug Corsica,
+    origins: "https://localhost:8080",
+    log: [rejected: :error, invalid: :warn, accepted: :debug]
+
   plug TwitterWeb.Router
 end

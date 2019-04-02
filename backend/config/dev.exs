@@ -8,7 +8,7 @@ use Mix.Config
 # with webpack to recompile .js and .css sources.
 config :twitter, TwitterWeb.Endpoint,
   http: [port: 4000],
-  debug_errors: true,
+  debug_errors: false,
   code_reloader: true,
   check_origin: false,
   watchers: []
@@ -52,5 +52,5 @@ config :twitter, Twitter.Repo,
   username: "postgres",
   password: "postgres",
   database: "twitter_dev",
-  hostname: "localhost",
+  hostname: "192.168.211.129",
   pool_size: 10
